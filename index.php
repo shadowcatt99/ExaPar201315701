@@ -8,11 +8,12 @@
  <div name="top" align="center">
  	<img src="images/header.png" width="1000" />
  </div>
- <div name="middle" align="center">
  
+ <div name="middle" align="center">
+
  <table>
  <td>
- 	<tr> For data scientists</tr>
+ 	<tr> <h2>For data scientists</h2> </tr>
  	<tr>
 	  	<?php
 		$server="us-cdbr-iron-east-03.cleardb.net";
@@ -23,7 +24,7 @@
 		if($conn->connect_error){
 			die("Connection Failed: ".$conn->connect_error);
 		}
-		$sql="select * from ad_bb6ddb2f34daf52.servicios where codigo_servicio<4";
+		$sql="select * from ad_bb6ddb2f34daf52.servicios where codigo_servicio=0001 and codigo_servicio=0002 and codigo_servicio=0003";
 		$result=$conn->query($sql);
 		if($result->num_rows > 0){
 			?>
@@ -60,7 +61,7 @@
 		if($conn->connect_error){
 			die("Connection Failed: ".$conn->connect_error);
 		}
-		$sql="select * from ad_bb6ddb2f34daf52.servicios where codigo_servicio>3";
+		$sql="select * from ad_bb6ddb2f34daf52.servicios where codigo_servicio=0004 and codigo_servicio=0005 and codigo_servicio=0006";
 		$result=$conn->query($sql);
 		if($result->num_rows > 0){
 			?>
